@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/configurationFile/configuration.xsd">
+	<implementationsPackage>doom5.example.impl</implementationsPackage>
+	<dbConfiguration>
+		<connectionType>EXAMPLECONNECTION</connectionType>
+		<driverClass>org.sqlite.JDBC</driverClass>
+		<connectionString>jdbc:sqlite:./resources/DB.sqlite</connectionString>
+		<onConnectStatement>select * from PARAMETERS</onConnectStatement>
+		<prop>
+			<name>nameExample</name>
+			<value>valueExample</value>
+		</prop>
+	</dbConfiguration>
+	<properties>
+		<batchName>ExampleImpl</batchName>
+		<prop>
+			<name>name</name>
+			<value>valueExampleImpl</value>
+		</prop>
+		<prop>
+			<name>destServer</name>
+			<value>server1.domain.com</value>
+		</prop>
+		<prop>
+			<name>destShare</name>
+			<value>Folder1</value>
+		</prop>
+		<prop>
+			<name>destDomain</name>
+			<value>MYDOMAIN</value>
+		</prop>
+		<prop>
+			<name>destUser</name>
+			<value>MYUSER</value>
+		</prop>
+		<prop>
+			<name>destPass</name>
+			<value>MYPASSWORD</value>
+		</prop>
+	</properties>
+</configuration>

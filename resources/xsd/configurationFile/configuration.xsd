@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- XML Schema Generated from XML Document on Mon Oct 12 2020 11:36:45 
+		GMT+0200 (Central European Summer Time) -->
+	<!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+	<xs:element name="configuration">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="implementationsPackage"
+					type="xs:string"></xs:element>
+				<xs:element name="dbConfiguration" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="connectionType" type="xs:string"></xs:element>
+							<xs:element name="driverClass" type="xs:string"></xs:element>
+							<xs:element name="connectionString" type="xs:string"></xs:element>
+							<xs:element name="onConnectStatement" type="xs:string"
+								maxOccurs="unbounded"></xs:element>
+							<xs:element name="prop" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="name" type="xs:string"></xs:element>
+										<xs:element name="value" type="xs:string"></xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="properties"  maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="batchName" type="xs:string"></xs:element>
+							<xs:element name="prop" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="name" type="xs:string"></xs:element>
+										<xs:element name="value" type="xs:string"></xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
